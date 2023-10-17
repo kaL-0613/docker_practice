@@ -1,5 +1,8 @@
 FROM ubuntu:22.04
 
+ENV APACHE_CONFDIR=/etc/apache2
+ENV APACHE_ENVVARS=$APACHE_CONFDIR/envvars
+
 RUN apt update \
   && apt install -y apache2
 
